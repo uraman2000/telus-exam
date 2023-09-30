@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import { User } from "./types"
 
-const apiBaseUrl = "http://localhost:3000/" // Replace with your API base URL
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL // Replace with your API base URL
 
 export const subsciberApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: apiBaseUrl }),
