@@ -1,12 +1,8 @@
-// src/config/typeorm.config.ts
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { ConfigService } from './config.service';
 
-export const typeOrmConfig = async (
-  configService: ConfigService,
-): Promise<TypeOrmModuleOptions> => ({
+export const typeOrmConfig = async (): Promise<TypeOrmModuleOptions> => ({
   type: 'mongodb',
-  url: configService.mongodbUri,
+  url: process.env.DB_URI,
   synchronize: true,
   useUnifiedTopology: true,
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
