@@ -4,11 +4,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {
-    "bootstrap": "lerna exec npm install",
-    "publish": "lerna publish --force-publish",
-    "test": "lerna run test"
-  },
   "dependencies": {},
   "devDependencies": {
     "lerna": "^7.3.0"
