@@ -1,8 +1,8 @@
 {
   "version": 2,
   "env": {
-    "DB_URI": "@DB_URI",
-    "CORS_WHITELIST": "@CORS_WHITELIST"
+    "DB_URI": "@vercel_db_uri",
+    "CORS_WHITELIST": "@vercel_cors_whitelist"
   },
   "builds": [
     {
